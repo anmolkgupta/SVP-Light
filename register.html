@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/validateSignUp.js"></script>
+</head>
+
+<body>
+    <div class="flex min-h-[90vh] items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="w-1/5 space-y-8">
+            <div>
+                <div class="relative mx-auto h-[84px] w-[98px]">
+                    <img src="./assets/images/logo.png" alt="" />
+                </div>
+                <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+                    Register
+                </h2>
+            </div>
+            <div class="mt-8 space-y-6" autocomplete="new-password">
+                <div class="-space-y-px rounded-md shadow-sm">
+                    <div class="flex flex-col md:flex-row md:space-x-2 mb-2">
+                        <div class="w-full">
+                            <label htmlFor="name" class="sr-only">
+                                Name
+                            </label>
+                            <input id="name" name="name" type="text" autocomplete="new-password" required
+                                class="relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-[#00ACE9] focus:outline-none focus:ring-[#00ACE9] sm:text-sm"
+                                placeholder="Name" />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:space-x-2 mb-2">
+                        <div class="mt-2 w-full md:mt-0">
+                            <label htmlFor="contactNumber" class="sr-only">
+                                Phone Number
+                            </label>
+                            <input id="contactNumber" name="contactNumber" type="text" required
+                                class="relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-[#00ACE9] focus:outline-none focus:ring-[#00ACE9] sm:text-sm"
+                                placeholder="Phone Number" />
+                        </div>
+                    </div>
+                
+                    <div class="flex flex-col md:flex-row md:space-x-2 py-2">
+                        <div class="mt-2 w-full">
+                            <label htmlFor="otp" class="sr-only">
+                                Otp
+                            </label>
+                            <input id="otp" name="otp" type="text" required
+                                class="relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-[#00ACE9] focus:outline-none focus:ring-[#00ACE9] sm:text-sm"
+                                placeholder="OTP" />
+                        </div>
+                        <button class="justify-center rounded-md border border-transparent bg-[#00ACE9] py-1 px-4 text-sm font-medium text-white hover:bg-[#008dc1] focus:outline-none focus:ring-2 focus:ring-[#00ACE9] focus:ring-offset-2"
+                        onclick="otpValidation()">OTP</button>
+                    </div>
+                  
+                    <div class="flex flex-col md:flex-row md:space-x-2 mb-2">
+                        <div class="relative mt-2 w-full">
+                            <label htmlFor="password" class="sr-only">
+                                Password
+                            </label>
+                            <input id="password" name="password" autocomplete="new-password" required
+                                class="relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 pr-12 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-[#00ACE9] focus:outline-none focus:ring-[#00ACE9] sm:text-sm"
+                                placeholder="Password" type="password" />
+
+                        </div>
+                        <div class="mt-2 w-full">
+                            <label htmlFor="confirmPassword" class="sr-only">
+                                Confirm Password
+                            </label>
+                            <input id="confirmPassword" name="confirmPassword" type="password"
+                                autocomplete="new-password" required
+                                class="relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-[#00ACE9] focus:outline-none focus:ring-[#00ACE9] sm:text-sm"
+                                placeholder="Confirm Password" />
+                        </div>
+                    </div>
+                
+                <div class="flex flex-row justify-between py-3">
+                    <p class="text-center text-gray-700">
+                        <a href="./index.html">
+                            <span class="cursor-pointer font-semibold ">
+                                Download App
+                            </span>
+                        </a>
+                    </p>
+                    <p class="text-center text-gray-700">
+                        <a href="./index.html">
+                            <span class="cursor-pointer font-semibold ">
+                                Login
+                            </span>
+                        </a>
+                    </p>
+                </div>
+                <button type="submit"
+                        class="group relative flex w-full justify-center rounded-md border border-transparent bg-[#00ACE9] py-2 px-4 text-sm font-medium text-white hover:bg-[#008dc1] focus:outline-none focus:ring-2 focus:ring-[#00ACE9] focus:ring-offset-2"
+                        onclick="formValidation()">
+                        Sign Up
+                    </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
